@@ -1,0 +1,31 @@
+import java.util.Random;
+
+
+public class main2 {
+
+
+	public static void main(String[] args) {
+		Rectangle[] rectangles = new Rectangle[10];
+		Random rnd = new Random();
+		for (int i = 0; i < rectangles.length;i++) {
+			rectangles[i] = new Rectangle(rnd.nextInt(9) + 2, rnd.nextInt(9) + 2);
+		}
+		System.out.println("Téglalapok: ");
+		for (Rectangle rectangle : rectangles) {
+			System.out.println(rectangle);
+		}
+		
+		Rectangle minRectangle = rectangles[0];
+		for (int i =1; i<rectangles.length; i++){
+			if (minRectangle.isBigger(rectangles[i])){
+				minRectangle = rectangles[i];
+			}
+		}
+		
+		System.out.println("Legkisebb méretű téglalap: " + minRectangle);
+	
+		Scanner scanner = new Scanner (System.in);
+		Rectangle userRectangle
+	}
+
+}
