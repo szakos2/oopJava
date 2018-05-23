@@ -1,0 +1,56 @@
+package tartalyos;
+
+public class Tartalyos extends Tarolo
+{
+	public double nyomas; // a.
+
+	public Tartalyos(int terfogat, double nyomas) // a.
+	{
+		super(terfogat);
+		this.nyomas = nyomas;
+	}
+
+	@Override
+	public boolean VeszelyesE() // b.
+	{
+		if (getTerfogat () * this.nyomas > 100)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	@Override
+	public String toString() // c.
+	{
+		return "A tartaály térfogata: " + getTerfogat () + ", nyomása: " + this.nyomas + ", veszélyes e: " + VeszelyesE ();
+	}
+	
+	public boolean NagyobbNyomasuE (Tartalyos tartaly) // d.
+	{
+		if (this.nyomas > tartaly.nyomas)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	public static Tartalyos NagyobbTartalyE (Tartalyos tartaly1, Tartalyos tartaly2) // e.
+	{
+		if (tartaly1.getTerfogat() > tartaly2.getTerfogat())
+		{
+			return tartaly1;
+		}
+		else
+		{
+			return tartaly2;
+		}
+	}
+	
+}

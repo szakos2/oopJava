@@ -1,0 +1,20 @@
+package tartalyos;
+
+public abstract class Tarolo
+{
+	private int terfogat;
+	
+	public Tarolo (int terfogat) // b. Konstruktor
+	{
+		this.terfogat = terfogat;
+	}
+	
+	public abstract boolean VeszelyesE (); // c.
+	
+	public int getTerfogat () // d.
+	{
+		return this.terfogat;
+	}
+	
+	public abstract String toString ();
+}

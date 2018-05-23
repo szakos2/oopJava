@@ -1,0 +1,45 @@
+package tartalyos.fut;
+
+import java.util.Scanner;
+
+import tartalyos.Tartalyos;
+
+public class Proba
+{
+	public static void main(String[] args)
+	{
+		Scanner scan = new Scanner (System.in);
+		Tartalyos[] tartaly = new Tartalyos[5];
+		for (int i = 0; i < tartaly.length; i++) // a.
+		{
+			int terfogat = scan.nextInt();
+			double nyomas = scan.nextDouble();
+			tartaly[i] = new Tartalyos (terfogat, nyomas);
+		}
+		
+		for (int i = 0; i < tartaly.length; i++) // b.
+		{
+			System.out.println(tartaly[i].toString());
+		}
+		
+		int max = 0;
+		for (int i = 1; i < tartaly.length; i++) // c.
+		{
+			if (tartaly[max].nyomas < tartaly[i].nyomas)
+			{
+				max = i;
+			}
+		}
+		System.out.println("A legnagyobb nyomás: " + tartaly[max].nyomas);
+		
+		max = 0;
+		for (int i = 1; i < tartaly.length; i++)
+		{
+			if (tartaly[max].getTerfogat() < tartaly[i].getTerfogat())
+			{
+				max = i;
+			}
+		}
+		System.out.println("A legnagyobb tartály: " + tartaly[max].getTerfogat());
+	}
+}
